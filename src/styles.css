@@ -1,0 +1,93 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+@import url('https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css');
+
+* {
+  font-family: Abel;
+  font-weight: normal;
+}
+
+.img-container {
+    display: flex;
+    justify-content: center;
+}
+
+p {
+    font-size: 15px;
+}
+
+h1, p {
+    text-align: center;
+}
+
+input {
+    max-width: 300px;
+    border-radius: 40px;
+    font-size: 12px;
+
+}
+
+.alert-danger {
+    font-size: 10px;
+}
+
+.ng-valid[required], .ng-valid.required {
+  border-left: 5px solid #42A948;
+}
+
+.ng-invalid:not(form) {
+  border-left: 5px solid #a94442;
+}
+
+.form-control {
+  align-items: center;
+  justify-content: center;
+  display: block;
+  margin: auto;
+}
+
+.btn {
+  /*border-color: var(--main-content-button-color);
+  background-color: var(--main-content-button-color);*/
+  width: 300px;
+  height: 35px;
+ /* color: var(--main-content-button-text-color);*/
+  align-items: center;
+  justify-content: center;
+  display: block;
+  margin: auto;
+  border: 2px;
+  border-radius: 30px;
+  font-size: 12px;
+}
+
+.register-anchor {
+  /*background-color: var( --main-content-button-background-color);
+  border-color: var(--main-content-button-color);*/
+  align-items: center;
+  /*color: var(--main-content-hyperlink-button);*/
+  padding: 0;
+  align-content: center;
+  justify-content: center;
+  display: block;
+  margin: auto;
+  font-size: 11px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    font-size: 11px;
+}
+
+a:hover {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.nav-btn {
+    text-align: center;
+    margin: auto;
+}

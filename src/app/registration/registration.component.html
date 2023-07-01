@@ -1,0 +1,72 @@
+<div class="container">
+  <p>{{message}}</p>
+  <div class="img-container">
+
+  </div>
+  <p>{{steps}}</p>
+  <div class="form-container">
+    <form (ngSubmit)="Register()" [formGroup]="regForm">
+      <div class="form-group">
+        <input class="form-control"
+               type="text"
+               name="username"
+               [(ngModel)]="username"
+               placeholder="Enter your username"
+               formControlName="username" />
+        <div *ngIf="regForm.controls['username'].invalid && (regForm.controls['username'].dirty || regForm.controls['username'].touched)" class="alert alert-danger">
+          <div *ngIf="regForm.controls.username.errors?.['required']">
+            Username is required.
+          </div>
+          <div *ngIf="regForm.controls.username.errors?.['pattern']">
+            Only alphabetical characters are allowed.
+          </div>
+        </div>
+        <br/>
+        <input class="form-control"
+               type="email"
+               name="email"
+               [(ngModel)]="email"
+               placeholder="Enter your email"
+               formControlName="email"/>
+        <div *ngIf="regForm.controls['email'].invalid
+             && (regForm.controls['email'].dirty
+             || regForm.controls['email'].touched)"
+             class="alert alert-danger">
+          <div *ngIf="regForm.controls.email.errors?.['required']">
+            Email is required.
+          </div>
+          <!--<p>
+            Add additional validators for email like a pattern</p>-->
+        </div>
+      </div>
+    
+      <input class="form-control"
+             type="password"
+             name="password"
+             [(ngModel)]="password"
+             placeholder="Enter your password"
+             formControlName="password"/>
+      <div *ngIf="regForm.controls['password'].invalid
+           && (regForm.controls['password'].dirty
+           || regForm.controls['password'].touched)"
+           class="alert alert-danger">
+        <div *ngIf="regForm.controls.password.errors?.['required']">
+          Password is required.
+        </div>
+      </div>
+      <br/>
+      <button mat-button
+              type="submit"
+              class="btn"
+              [disabled]="!regForm.valid">
+        Register
+      </button>
+    </form>
+   
+    <div class="nav-btn">
+      <a mat-button href="/login" target="_self" class="login-anchor">
+        Sign in instead?
+      </a>
+    </div>
+  </div>
+</div>
